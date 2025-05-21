@@ -9,9 +9,58 @@
     <title>Buddy's Life</title>
     <link href="/src/style.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="bg-amber-50 text-amber-950 font-[cursive]">
     <div id="app">
-      <h1>Buddy's Life</h1>
+      <header
+        class="sticky top-0 z-10 flex justify-between items-center py-2 px-4 sm:py-4 sm:px-8 shadow-sm bg-amber-50/80 backdrop-blur-sm"
+        aria-label="Main header"
+      >
+        <div
+          class="flex items-center space-x-2 select-none"
+          aria-label="Logo"
+          aria-labelledby="logo"
+        >
+          <img src="/public/icon.svg" alt="icon logo" /><span
+            class="text-xl font-bold font-serif"
+            >Buddy's Life</span
+          >
+        </div>
+        <nav role="navigation" aria-label="Main navigation" class="relative">
+          <input
+            type="checkbox"
+            id="menu-toggle"
+            class="hidden peer focus:peer"
+            aria-label="Menu toggle"
+            aria-labelledby="menu-toggle"
+            role="button"
+          />
+          <label
+            for="menu-toggle"
+            class="flex sm:hidden flex-col cursor-pointer peer-focus:scale-105 peer-focus:transition-transform peer-focus:duration-300 peer-checked:*:bg-amber-600 peer-checked:*:even:opacity-0 peer-checked:*:nth-[1]:-rotate-45 peer-checked:*:nth-[1]:translate-x-[5px] peer-checked:*:nth-[1]:translate-y-[5px] peer-checked:*:nth-[3]:rotate-45 peer-checked:*:nth-[3]:translate-x-[6px] peer-checked:*:nth-[3]:-translate-y-[10px] space-y-1 *:w-6 *:h-1 *:bg-amber-800 *:hover:bg-amber-900 *:active:bg-amber-900 *:focus:bg-amber-900 *:rounded-lg *:transition-all *:duration-300 *:ease-in-out"
+            aria-label="Menu toggle button"
+            aria-labelledby="menu-toggle"
+            role="button"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <ul
+            class="hidden absolute right-0 sm:static peer-checked:flex sm:flex flex-col sm:flex-row bg-amber-100 sm:bg-transparent max-sm:p-2 space-x-4 font-bold text-amber-900 font-sans **:text-lg **:sm:text-sm **:md:text-base **:hover:underline **:hover:underline-offset-3 **:hover:decoration-amber-800 **:hover:text-amber-800 **:hover:scale-105 **:transition-all **:focus:outline-none **:focus:underline **:focus:underline-offset-3 **:focus:decoration-amber-800 **:focus:text-amber-800"
+            aria-label="Main navigation links"
+            aria-labelledby="main-nav"
+            role="list-items-links"
+          >
+            <li role="list-item"><a href="#" role="link">Sobre</a></li>
+            <li role="list-item"><a href="#humans" role="link">Humanos</a></li>
+            <li role="list-item"><a href="#friends" role="link">Amigos</a></li>
+            <li role="list-item"><a href="#toys" role="link">Brinquedos</a></li>
+            <li role="list-item">
+              <a href="#stories" role="link">Histórias</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
