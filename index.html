@@ -10,7 +10,7 @@
     <link href="/src/style.css" rel="stylesheet" />
   </head>
   <body class="bg-amber-50 text-amber-950 font-[cursive]">
-    <div id="app">
+    <div id="app" class="flex flex-col min-h-screen">
       <header
         class="sticky top-0 z-10 flex justify-between items-center py-2 px-4 sm:py-4 sm:px-8 shadow-sm bg-amber-50/80 backdrop-blur-sm"
         aria-label="Main header"
@@ -61,6 +61,62 @@
           </ul>
         </nav>
       </header>
+      <main class="flex-1" aria-label="Main content" role="main">
+        <section
+          id="hero"
+          class="container mx-auto"
+          aria-label="Hero section"
+          role="hero section"
+          aria-labelledby="hero-section"
+        >
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 items-center space-y-8 pt-12 sm:pt-18 px-4 sm:px-8 h-full"
+          >
+            <div
+              class="flex flex-col justify-center max-sm:text-center space-y-4 sm:max-w-sm lg:max-w-screen-sm"
+              aria-label="Hero content"
+              role="content"
+            >
+              <h1
+                class="text-3xl md:text-5xl lg:text-6xl text-amber-900 font-bold font-serif leading-tight capitalize"
+              >
+                Bem-vindo ao Incrível Mundo do Bolota!
+              </h1>
+              <p
+                class="text-lg lg:text-xl text-amber-800"
+                role="description"
+                aria-label="Hero description"
+                aria-labelledby="hero-description"
+              >
+                Aqui você encontra tudo sobre a vida do nosso cãozinho favorito!
+              </p>
+            </div>
+            <div>
+              <div
+                class="max-w-60 md:max-w-72 lg:max-w-sm bg-white shadow-md mx-auto py-4 px-4 rotate-2 origin-top hover:rotate-0 hover:shadow-lg transition-transform duration-300 ease-in-out after:content-[''] after:absolute after:-top-0.5 after:left-1/2 after:w-4 after:h-4 after:bg-amber-400 after:rounded-full after:border-2 after:border-amber-500 after:-z-10"
+                aria-label="Bolota's image"
+                role="Hero image"
+                aria-labelledby="bolota-image"
+              >
+                <img
+                  src="/public/images/bolota-01.jpg"
+                  alt="Bolota imagem"
+                  class="block object-cover w-full h-64 md:h-86 lg:h-108"
+                  aria-describedby="bolota-description"
+                />
+                <p
+                  class="pt-2 text-black text-center md:text-xl"
+                  id="bolota-description"
+                  aria-label="Bolota's name and age"
+                  role="description"
+                >
+                  Bolota, 6 anos
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
